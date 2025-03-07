@@ -9,6 +9,8 @@ export default antfu({
       'antfu/top-level-function': 'off',
       'no-console': 'warn',
       'unused-imports/no-unused-vars': 'warn',
+      'ts/no-namespace': 'off',
+      'ts/no-use-before-define': 'offS',
     },
   },
   typescript: true,

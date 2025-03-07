@@ -1,2 +1,1 @@
-export const HOME_URL = '/home/home'
-export const LOGIN_URL = '/login/login'
+export const piniaPersistPrefix = 'yht'

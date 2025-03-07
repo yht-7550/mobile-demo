@@ -33,7 +33,7 @@ pnpm build
 
 3. 
    3.2 pnpm build        (代码打包)
-   3.2 npx cap sync      (同步代码至android/ios文件夹)
+   3.2 pnpm cap:sync     (同步代码至android/ios文件夹)
 ```
 * 生成安装包
 ```
@@ -45,6 +45,7 @@ pnpm build
 ```
 
 ## Vant UI ⭐
+* [VantUI](https://vant-ui.github.io/vant/#/zh-CN)
 
 ## Tailwindcss字体图标库 🎨
 

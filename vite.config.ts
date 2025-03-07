@@ -13,7 +13,7 @@ export default defineConfig({
     Tailwindcss(),
     AutoImport({
       dts: './auto-imports.d.ts',
-      imports: ['vue', '@vueuse/core', 'vue-router'],
+      imports: ['vue', '@vueuse/core', 'vue-router', 'pinia'],
       resolvers: [
         VantResolver(),
       ],

@@ -8,15 +8,19 @@
     "build": "vue-tsc -b && vite build",
     "preview": "vite preview",
     "lint": "eslint",
-    "lint:fix": "eslint --fix"
+    "lint:fix": "eslint --fix",
+    "cap:sync": "npx cap sync"
   },
   "dependencies": {
     "@capacitor/android": "^7.0.1",
     "@capacitor/core": "^7.0.1",
     "@capacitor/device": "^7.0.0",
+    "@capacitor/haptics": "^7.0.0",
     "@capacitor/ios": "^7.0.1",
     "@tailwindcss/vite": "^4.0.9",
     "@vueuse/core": "^12.7.0",
+    "pinia": "^3.0.1",
+    "pinia-plugin-persistedstate": "^4.2.0",
     "tailwindcss": "^4.0.9",
     "vant": "^4.9.17",
     "vue": "^3.5.13",
