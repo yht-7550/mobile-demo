@@ -19,8 +19,8 @@ pnpm build
 ## Capacitor
 
 ### 使用 **[Capacitor](https://capacitorjs.com/docs/getting-started)** 进行 *Android* 和 *IOS* 项目包创建
-###
-可以在 ``package.json`` 安装对应的 [capacitor-plugins](https://capacitorjs.com/docs/plugins) 功能插件，以此充分利用原生 API 的全部功能
+
+* ### 可以安装对应的 [`capacitor`](https://capacitorjs.com/docs/plugins) 官方插件和 [`capawesome`](https://capawesome.io/plugins) 社区插件，以此充分利用原生 API 的全部功能
 
 ![alt text](capacitor-plugin.png)
 

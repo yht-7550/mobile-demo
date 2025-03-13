@@ -10,11 +10,16 @@ export default antfu({
       'no-console': 'warn',
       'unused-imports/no-unused-vars': 'warn',
       'ts/no-namespace': 'off',
-      'ts/no-use-before-define': 'offS',
+      'ts/no-use-before-define': 'off',
+      'ts/method-signature-style': 'off',
     },
   },
   typescript: true,
-  vue: true,
+  vue: {
+    overrides: {
+      'vue/v-slot-style': 'off',
+    },
+  },
   formatters: {
     css: true,
     prettierOptions: {

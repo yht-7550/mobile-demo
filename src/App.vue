@@ -1,7 +1,8 @@
 <script setup lang="ts">
 import { useGlobalStore } from '@/stores'
 
-const { globalState } = storeToRefs(useGlobalStore())
+const globalStore = useGlobalStore()
+const { globalState } = storeToRefs(globalStore)
 
 // themeVars 内的值会被转换成对应 CSS 变量
 // 比如 tabbarItemIconMarginBottom 会转换成 `--van-tabbar-item-icon-margin-bottom`
@@ -9,6 +10,10 @@ const themeVars = ref({
   tabbarItemIconMarginBottom: '0px',
   navBarBackground: globalState.value.themeColor,
   navBarTitleTextColor: globalState.value.navBarTitleColor,
+})
+
+onMounted(() => {
+  globalStore.setStatusBar()
 })
 </script>
 
@@ -18,7 +23,7 @@ const themeVars = ref({
       <div class="flex flex-col w-full h-full">
         <NavBar />
         <div class="flex-1">
-          <RouterView #default="{ Component, route }">
+          <RouterView #default="{ Component }">
             <KeepAlive>
               <component :is="Component" />
             </KeepAlive>
