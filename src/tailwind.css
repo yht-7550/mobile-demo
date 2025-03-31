@@ -1,12 +1,10 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
 @utility flex-center {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @apply flex justify-center items-center;
 }
 
-@plugin "@iconify/tailwind4" {
+@plugin '@iconify/tailwind4' {
   prefix: 'icon';
   scale: 1.5;
 }

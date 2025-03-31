@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { useGlobalStore, useAuthStore } from '@/stores'
+import { useAuthStore, useGlobalStore } from '@/stores'
 
 const { globalState } = storeToRefs(useGlobalStore())
 const { tabBarMenu } = storeToRefs(useAuthStore())
@@ -8,7 +8,7 @@ const themeColor = computed(() => globalState.value.themeColor)
 const tabBarList = computed(() => tabBarMenu.value)
 
 const onRouterChange = () => {
-  console.log('修改')
+  // console.log('修改')
 }
 </script>
 
@@ -34,9 +34,9 @@ const onRouterChange = () => {
             class="w-6 h-6"
             :class="[tabbar.icon ? `${tabbar.icon}` : '']"
             :style="{
-              color: props.active ? themeColor : '#7d7e80'
+              color: props.active ? themeColor : '#7d7e80',
             }"
-          ></span>
+          />
         </template>
         {{ tabbar.title }}
       </van-tabbar-item>

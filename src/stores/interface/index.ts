@@ -34,3 +34,15 @@ export namespace AuthState {
   export type TabBarMenu = TabBarMenuOpt[]
   export type FlatMenu = Omit<RouteRecordRaw, 'children'>
 }
+
+/**
+ * App
+ */
+export interface AppInfo {
+  /** App 名称 */
+  appName: string
+  /** App 版本号 */
+  appVersion: string
+  /** App 包名 */
+  appPackage: string
+}

@@ -10,29 +10,28 @@ const themeVars = ref({
   tabbarItemIconMarginBottom: '0px',
   navBarBackground: globalState.value.themeColor,
   navBarTitleTextColor: globalState.value.navBarTitleColor,
+  navBarIconColor: globalState.value.navBarTitleColor,
 })
 
-onMounted(() => {
-  globalStore.setStatusBar()
-})
+globalStore.setStatusBar()
 </script>
 
 <template>
   <div class="w-screen h-screen">
     <van-config-provider :theme="globalState.theme" :theme-vars="themeVars" class="w-full h-full">
-      <div class="flex flex-col w-full h-full">
-        <NavBar />
-        <div class="flex-1">
-          <RouterView #default="{ Component }">
+      <RouterView #default="{ Component, route }">
+        <div class="w-full h-full flex flex-col bg-[#F7F8FA]">
+          <NavBar v-if="!route.meta.ifHideNav" />
+          <div class="flex-1">
             <KeepAlive>
               <component :is="Component" />
             </KeepAlive>
-            <!-- <Transition :name="route.meta.transition || 'fade'">
-            </Transition> -->
-          </RouterView>
+          </div>
+          <TabBar v-if="route.meta.ifTabbar" />
         </div>
-        <TabBar />
-      </div>
+        <!-- <Transition :name="route.meta.transition || 'fade'">
+        </Transition> -->
+      </RouterView>
     </van-config-provider>
   </div>
 </template>

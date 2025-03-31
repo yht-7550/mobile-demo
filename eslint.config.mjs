@@ -25,7 +25,9 @@ export default antfu({
     prettierOptions: {
       tabWidth: 2,
       useTabs: false,
+      singleQuote: true,
+      semi: true,
     },
   },
-  ignores: ['**/node_modules/**', '**/dist/**', 'README.md'],
+  ignores: ['**/node_modules/**', '**/dist/**', 'README.md', '**/android/**'],
 })

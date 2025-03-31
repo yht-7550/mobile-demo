@@ -44,6 +44,6 @@ export const useAuthStore = defineStore('auth', () => {
   return { menuList, flatMenuList, tabBarMenu }
 }, {
   persist: piniaPersistConfig(`${piniaPersistPrefix}-auth`, {
-    pick: ['tabBarMenu'],
+    pick: ['menuList'],
   }),
 })

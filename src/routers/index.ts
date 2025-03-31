@@ -20,7 +20,7 @@ router.beforeEach((to, from, next) => {
   const { globalState } = storeToRefs(useGlobalStore())
   const { menuList, tabBarMenu } = storeToRefs(useAuthStore())
   menuList.value = pageRouters
-  if (from.path == '/') {
+  if (from.path === '/') {
     const findIndex = tabBarMenu.value.findIndex(e => e.path === to.path)
     if (findIndex > -1) {
       globalState.value.activeTabbarIdx = findIndex
